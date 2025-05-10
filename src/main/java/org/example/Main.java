@@ -17,7 +17,6 @@ public class Main {
         Scanner input = new Scanner(System.in);
         String[] materails;
         double[] grades;
-        long num = 0000;
 
 
         while (true) {
@@ -30,11 +29,10 @@ public class Main {
                 long academicNumber = 10000;
                 while (true) {
                     String storageNum = String.valueOf(r.nextLong(academicNumber));
-                    String id = "2025"+"0".repeat((String.valueOf(academicNumber).length()) - storageNum.length()) + storageNum;
+                    String id = "2025"+"0".repeat((String.valueOf(academicNumber).length() - 1) - storageNum.length()) + storageNum;
                     System.out.println(id);
                     if (findById(Long.parseLong(id))) {
                         personal.setId(Long.parseLong(id));
-                        num++;
                         break;
                     }
                 }
